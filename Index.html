@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calendário</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="check-color">
+    <h2 id="dataAtualTitulo"></h2>
+
+    <form id="meuFormulario">
+      <fieldset>
+        <legend>Você trabalhou hoje? </legend>
+        <div>
+          <input type="radio" id="contactChoice1" name="contact" value="1" />
+          <label for="contactChoice1">Sim</label>
+          <input type="radio" id="contactChoice2" name="contact" value="0" />
+          <label for="contactChoice2">Não</label>
+        </div>
+      </fieldset>
+    </form>
+    
+    <pre id="log"></pre>
+    
+    <h3> Selecione o dia que pretende saber se trabalha:</h3>
+    <input type="date" id="dateInput">
+    <button id="verificarBtn">Gerar calendário</button>
+    <p id="resultadoCor"></p>
+    
+    <!-- Agora o calendário vem aqui, depois do resultadoCor -->
+    <div class="calendar">
+      <div class="header">
+        <button id="prev">&#8592;</button>
+        <div id="monthYear"></div>
+        <button id="next">&#8594;</button>
+      </div>
+      <div class="weekdays">
+        <div>Dom</div><div>Seg</div><div>Ter</div><div>Qua</div><div>Qui</div><div>Sex</div><div>Sáb</div>
+      </div>
+      <div class="days" id="days"></div>
+    </div>
+    <p id="obs"> </p>
+
+  <script src="script.js"></script>
+</body>
+</html>
